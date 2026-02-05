@@ -1,18 +1,18 @@
-AutoMata Pipelines + XDoTool Menu
+##AutoMata Pipelines + XDoTool Menu
 
-Automation for “puppet users” 🧠🤖
+Automation for “puppet users”
 
 This project is made up of two separate tools that pair together to automate menial, repetitive tasks on a laptop or server—what I like to call a puppet user.
 
 Think:
 
-Bots without APIs
+- Bots without APIs
 
-Automation without writing real code
+- Automation without writing real code
 
-Turning a machine into a very obedient human
+- Turning a machine into a very obedient puppet
 
-What Is This?
+#What Is This?
 
 AutoMata Pipelines and XDoTool Menu are designed to work together to automate almost anything that can be done with a keyboard and mouse.
 
