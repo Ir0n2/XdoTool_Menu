@@ -1,4 +1,4 @@
-##AutoMata Pipelines + XDoTool Menu
+AutoMata Pipelines + XDoTool Menu
 
 Automation for “puppet users”
 
@@ -28,13 +28,13 @@ AutoMata Pipelines are preprogrammed workflows.
 
 Call them:
 
-workflows
+-workflows
 
-sequences
+-sequences
 
-algorithms
+-formula
 
-orders of operation
+-order of operations
 
 We call them pipelines.
 
