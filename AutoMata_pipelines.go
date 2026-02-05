@@ -16,6 +16,8 @@ import (
 	"path/filepath"
 )
 
+var PUBLICVARAPIKEY string = "KEY HERE"
+
 func main() {
 
 	//	fmt.Println(geminiAnalyzeImage("/home/zerocool/Pictures/haroldHappy.jpeg", "Describe this image in a few words."))
@@ -456,7 +458,7 @@ func geminiAnalyzeImage(path, input string) string {
     ctx := context.Background()
 
     client, err := genai.NewClient(ctx, &genai.ClientConfig{
-        APIKey:  "AIzaSyDllaKsIjJsRYvGtKt9g-QT0tEiP0VVNiQ",
+        APIKey:  PUBLICVARAPIKEY,
         Backend: genai.BackendGeminiAPI,
     })
     if err != nil {
@@ -507,44 +509,3 @@ func geminiAnalyzeImage(path, input string) string {
     // Now safe
     return result.Text()
 }
-
-
-/*
-// uses gemini to analyze screenshot (so we can what's on screen.)
-func geminiAnalyzeImage(path, input string) string {
-	/*
-	  ctx := context.Background()
-	  client, err := genai.NewClient(ctx, nil)
-	  if err != nil {
-	      log.Fatal(err)
-	  }
-	*//*
-
-	ctx := context.Background()
-	client, err := genai.NewClient(ctx, &genai.ClientConfig{
-		APIKey:  "AIzaSyDllaKsIjJsRYvGtKt9g-QT0tEiP0VVNiQ",
-		Backend: genai.BackendGeminiAPI,
-	})
-	if err != nil {
-		log.Fatal(err)
-	}
-	uploadedFile, _ := client.Files.UploadFromPath(ctx, path, nil)
-
-	parts := []*genai.Part{
-		genai.NewPartFromText(input),
-		genai.NewPartFromURI(uploadedFile.URI, uploadedFile.MIMEType),
-	}
-
-	contents := []*genai.Content{
-		genai.NewContentFromParts(parts, genai.RoleUser),
-	}
-
-	result, _ := client.Models.GenerateContent(
-		ctx,
-		"gemini-2.5-flash",
-		contents,
-		nil,
-	)
-
-	return result.Text()
-}*/
